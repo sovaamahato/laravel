@@ -35,7 +35,7 @@
       <td><button type="button" class="btn btn-primary">Edit</button></td>
       
 
-      <td><button type="button" class="btn btn-danger">Danger</button></td>
+      <td><button type="button" class="btn btn-danger">Delete</button></td>
     </tr>
     
    
