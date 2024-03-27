@@ -9,7 +9,8 @@ class ExpenseController extends Controller
 {
     public function index()
     {
-        return view('welcome');
+        $formData=Expense::all();
+        return view('welcome', ['formData'=>$formData]);
     }
 
     public function displayCreateForm()
@@ -31,6 +32,7 @@ class ExpenseController extends Controller
          $formData->category = $request->input('category');
          $formData->amount = $request->input('amount');
          $formData->save();
+         return redirect()->route('expense.home')->with('success', 'Data saved successfully!');
 
          
     }

@@ -27,7 +27,22 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
+
+  @foreach ($formData as $data)
+                <tr>
+                <td>{{ $data->id }}</td>
+                    <td>{{ $data->title }}</td>
+                    <td>{{ $data->amount }}</td>
+                    <td>{{ $data->category }}</td>
+                    <td><button type="button" class="btn btn-primary">Edit</button></td>
+      
+
+      <td><button type="button" class="btn btn-danger">Delete</button></td>
+                </tr>
+            @endforeach
+
+
+    <!-- <tr>
       <th scope="row">1</th>
       <td>Buy something</td>
       <td>100</td>
@@ -36,7 +51,7 @@
       
 
       <td><button type="button" class="btn btn-danger">Delete</button></td>
-    </tr>
+    </tr> -->
     
    
   </tbody>
